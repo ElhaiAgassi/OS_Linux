@@ -20,7 +20,7 @@ libcodec: codecA.h codecA.c codecB.h codecB.c
 	$(CC) $(CFLAGS) -shared codecA.c codecB.c -o libcodec.so
 
 stshell: stshell.c
-	$(CC) $(CFLAGS) -o stshell stshell3.c -lreadline
+	$(CC) $(CFLAGS) -o stshell stshell.c -lreadline
 
 .PHONY: clean
 clean:
