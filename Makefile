@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -g -Wall
 LDFLAGS =  -fPIC
 
-all: cmp copy libcodecA libcodecB encode decode
+all: cmp copy libcodec encode decode stshell
 
 cmp: cmp.c
 	$(CC) $(CFLAGS) -o cmp cmp.c
@@ -10,18 +10,18 @@ cmp: cmp.c
 copy: copy.c
 	$(CC) $(CFLAGS) -o copy copy.c
 
-encode: libcodecA libcodecB encode.c 
-	$(CC) $(LDFLAGS) -o encode encode.c -L. -lcodecA -lcodecB
+encode: libcodec encode.c 
+	$(CC) $(LDFLAGS) -o encode encode.c -L. -l codec 
 
-decode: libcodecA libcodecB decode.c
-	$(CC) $(LDFLAGS) -o decode decode.c -L. -lcodecA -lcodecB
+decode: libcodec decode.c
+	$(CC) $(LDFLAGS) -o decode decode.c -L. -l codec
 
-libcodecA: codecA.h codecA.c
-	$(CC) $(CFLAGS) -shared codecA.c -o libcodecA.so
+libcodec: codecA.h codecA.c codecB.h codecB.c
+	$(CC) $(CFLAGS) -shared codecA.c codecB.c -o libcodec.so
 
-libcodecB: codecB.h codecB.c
-	$(CC) $(CFLAGS) -shared codecB.c -o libcodecB.so
+stshell: stshell.c
+	$(CC) $(CFLAGS) -o stshell stshell3.c -lreadline
 
 .PHONY: clean
 clean:
-	rm -f encode decode *.so cmp copy
+	rm -f encode decode stshell *.so cmp copy

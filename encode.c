@@ -1,18 +1,35 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "codecA.h"
 #include "codecB.h"
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
+    char *codec;
+    char *message;
+
+    if (argc == 2 && !isatty(STDIN_FILENO))
+    {
+        message = (char*) malloc(1248 * sizeof(char));
+        if (fgets(message, 1248, stdin) != NULL)
+        {
+            // Remove the newline character at the end of the input
+            message[strcspn(message, "\n")] = 0;
+            codec = argv[1];
+        }
+    }
+    else if (argc == 3)
+    {
+        codec = argv[1];
+        message = argv[2];
+    }
+    else
     {
         printf("Usage: encode <codec> <message>\n");
         return 1;
     }
-
-    char *codec = argv[1];
-    char *message = argv[2];
 
     if (strcmp(codec, "codecA") == 0)
     {

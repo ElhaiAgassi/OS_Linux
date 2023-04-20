@@ -5,6 +5,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 #define MAX_CMD_LEN 100
 #define MAX_ARGS 10
@@ -12,12 +14,12 @@
 void sigintHandler(int sig)
 {
     // Signal handler for SIGINT (Ctrl+C)
-    printf("\nReceived SIGINT (Ctrl+C). Exiting gracefully...\nstshell> ");
+    printf("\nReceived SIGINT (Ctrl+C). Exiting gracefully...\n");
 }
 
 int main()
 {
-    char input[MAX_CMD_LEN];
+    char *input;
     char *args[MAX_ARGS];
     char *token;
     int i;
@@ -26,11 +28,23 @@ int main()
 
     while (1)
     {
-        printf("stshell> ");
-        fgets(input, MAX_CMD_LEN, stdin);
+        input = readline("stshell> "); // Read input using readline
 
+        if (input == NULL)
+        {
+            // If input is NULL, readline encountered EOF (Ctrl+D), exit gracefully
+            printf("\n");
+            break;
+        }
+
+        // Add input to readline history
+        add_history(input);
+
+        fgets(input, MAX_CMD_LEN, stdin);
+/* 
         // Remove newline character from input
         input[strcspn(input, "\n")] = 0;
+ */
 
         // Tokenize input to extract program name and arguments
         token = strtok(input, " ");
@@ -226,6 +240,8 @@ int main()
                 waitpid(pid, NULL, 0);
             }
         }
+        free(input); // Free memory allocated by readline
     }
 
-    return 0;
+return 0;
+}

@@ -22,7 +22,7 @@ int copy(char *src_filename, char *dest_filename, bool verbose, bool force) {
     {
         if (!force)
         {
-            printf("target file exist");
+            printf("target file exist\n");
             fclose(src_file);
             fclose(dest_file);
             return 1;
