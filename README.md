@@ -81,8 +81,7 @@ cat Makefile | grep: | sort
 ./decode codecB "zh#zrq" | ./encode codecA  
 ```
 file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2015-00-40.png
-
-file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2015-01-21.png
+![image](https://user-images.githubusercontent.com/92378800/233802074-c61336fb-5301-4abe-b9d4-78795e6244d6.png)
 
 Exiting the "stshell":
 ```
