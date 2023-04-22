@@ -87,3 +87,4 @@ Exiting the "stshell":
 ```
 exit   // Terminates the shell and ends the program execution
 ```
+![image](https://user-images.githubusercontent.com/92378800/233802165-fc7a442a-c4d1-4eba-b732-f280dd6d83d4.png)
