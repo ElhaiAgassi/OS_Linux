@@ -70,14 +70,16 @@ cat Makefile
 
 pressing Crtl+C
 ```
-
+file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2014-58-56.png
+file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2014-59-50.png
 Piping commands using "|":
 ```
 cat Makefile | grep: | sort
 
 ./decode codecB "zh#zrq" | ./encode codecA  
 ```
-
+file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2015-00-40.png
+file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2015-01-21.png
 Exiting the "stshell":
 ```
 exit   // Terminates the shell and ends the program execution
