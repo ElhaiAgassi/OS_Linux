@@ -65,20 +65,20 @@ Run the "stshell" program in a Linux environment.
 Running a CMD tool:
 ```
 ls
-```
+
 cat Makefile 
-```
+
 pressing Crtl+C
-```
+
 
 Piping commands using "|":
 ```
 cat Makefile | grep: | sort
-```
+
 ./decode codecB "zh#zrq" | ./encode codecA  
 ```
 
 Exiting the "stshell":
-```
+
 exit   // Terminates the shell and ends the program execution
 ```
