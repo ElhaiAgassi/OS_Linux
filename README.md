@@ -64,19 +64,20 @@ Run the "stshell" program in a Linux environment.
 
 Running a CMD tool:
 ```
-tool_name arg1 arg2 ...
+ls
 ```
-Redirecting output to a file using ">" or ">>":
-
+cat Makefile 
 ```
-tool_name arg1 > output_file   // Redirect stdout to output_file (overwrite)
-tool_name arg1 >> output_file  // Redirect stdout to output_file (append)
-```
+pressing Crtl+C
 
 Piping commands using "|":
 ```
-tool1 arg1 | tool2 arg2 | tool3 arg3   // Pipe output of tool1 to input of tool2, and so on
+cat Makefile | grep: | sort
+
 ```
+./decode codecB "zh#zrq" | ./encode codecA  
+```
+
 Exiting the "stshell":
 ```
 exit   // Terminates the shell and ends the program execution
