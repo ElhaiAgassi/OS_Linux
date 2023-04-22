@@ -69,11 +69,11 @@ ls
 cat Makefile 
 ```
 pressing Crtl+C
+```
 
 Piping commands using "|":
 ```
 cat Makefile | grep: | sort
-
 ```
 ./decode codecB "zh#zrq" | ./encode codecA  
 ```
