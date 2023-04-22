@@ -69,7 +69,7 @@ ls
 cat Makefile 
 
 pressing Crtl+C
-
+```
 
 Piping commands using "|":
 ```
@@ -79,6 +79,6 @@ cat Makefile | grep: | sort
 ```
 
 Exiting the "stshell":
-
+```
 exit   // Terminates the shell and ends the program execution
 ```
