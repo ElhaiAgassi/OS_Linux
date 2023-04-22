@@ -70,9 +70,9 @@ cat Makefile
 
 pressing Crtl+C
 ```
-file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2014-58-56.png
+![image](https://user-images.githubusercontent.com/92378800/233802109-9c31a8f8-3850-408e-a024-6f8e253c7c69.png)
 
-file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2014-59-50.png
+![image](https://user-images.githubusercontent.com/92378800/233802128-f71339de-a276-4e37-ac3f-f872cddde52a.png)
 
 Piping commands using "|":
 ```
@@ -80,7 +80,7 @@ cat Makefile | grep: | sort
 
 ./decode codecB "zh#zrq" | ./encode codecA  
 ```
-file:///home/danielle/Pictures/Screenshots/Screenshot%20from%202023-04-22%2015-00-40.png
+![image](https://user-images.githubusercontent.com/92378800/233802100-df89be39-e144-492a-8166-08365fee66ae.png)
 ![image](https://user-images.githubusercontent.com/92378800/233802074-c61336fb-5301-4abe-b9d4-78795e6244d6.png)
 
 Exiting the "stshell":
